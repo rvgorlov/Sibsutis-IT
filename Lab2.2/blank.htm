@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//RU">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+	<title>Горлов Роман ИУ-423 Лабораторная 2.1</title>
+</head> 
+
+<script language="JavaScript">
+// создаем глобальные переменные для обмена между функциями
+
+var delay = 1000;				// значение задержки
+var imageNum = 1; 				// стартовый номер картинки
+var theImages = new Array();	// массив с названиями картинок
+var startFlag = 3;				// буль для старта системы
+
+for (i = 1; i < 13; i++) {
+	// alert('Первая строка\nВторая строка');
+   		theImages[i] = new Image();
+   		theImages[i].src = "s" + i + ".gif";
+   }
+
+function animation() {
+
+	if (startFlag == 0) {
+   		document.anim.src = theImages[imageNum].src;
+   		imageNum++;   
+   		if (imageNum > 10) {
+   			imageNum = 1;
+   		}
+   		setTimeout('animation()', delay); 
+	}
+}
+
+function slow() {
+	// alert('Первая строка\nВторая строка');
+   delay = delay + 100;
+   if(delay > 4000) delay = 4000;
+}
+
+function fast() {
+	// alert('Первая строка\nВторая строка');
+   delay = delay - 100;
+   if(delay < 0) delay = 0;
+}
+
+function start() {
+	// alert('Первая строка\nВторая строка');
+	startFlag = 0;
+	setTimeout('animation()', delay); 
+}
+
+function stop() {
+	// alert('Первая строка\nВторая строка');
+	startFlag = 1; 
+}
+
+function StartTimer() {
+
+	if (startFlag == 3) {
+		// alert('Первая строка\nВторая строка');
+		setTimeout('animation()', delay); 
+		startFlag = 0; 
+	};
+}
+
+
+
+</script>
+
+<body bgcolor="white" text="black" link="blue" alink="red" vlink="green">
+<img name="anim" src="s1.gif" alt="Альтернативный текст" onLoad="StartTimer()">  
+<form>
+	<input type="button" value="Медленнее" onclick="slow()">
+	<input type="button" value="Быстрее" onclick="fast()">
+	<input type="button" value="Стоп" onclick="stop()">
+	<input type="button" value="Старт" onclick="start()">
+</form>
+
+</body>
+</html>

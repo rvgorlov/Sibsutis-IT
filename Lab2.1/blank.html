@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//RU">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=Windows-1251">
+<TITLE>Горлов Роман ИУ-423 Лабораторная 2.1</TITLE>
+</HEAD> 
+
+<script>
+function chg(){
+
+	// получаем объекты в дивах, привязываем объекты
+	var d1=document.getElementById("div1");		
+	var d2=document.getElementById("div2");
+
+	// создаем клоны объектов
+	var d11=d1.cloneNode(true);
+	var d22=d2.cloneNode(true);
+
+	// помещаем перед объектами дочерние элементы
+	d2.parentNode.insertBefore(d11,d2);
+	d1.parentNode.insertBefore(d22,d1);
+
+	// удаляем старые объект
+	d1.parentNode.removeChild(d1);
+	d2.parentNode.removeChild(d2);
+}
+</script>
+
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" ALINK="red" VLINK="green">
+<form>
+	<p style="text-align: center"><input type="button" value="Сменить" onclick="chg()"></p>
+</form>
+<div id="div1"><img src="img/r1.gif" alt="альтернативный текст"></div>
+<div id="div2"><img src="img/r2.gif" alt="альтернативный текст"></div>
+
+</BODY>
+</HTML>
+
