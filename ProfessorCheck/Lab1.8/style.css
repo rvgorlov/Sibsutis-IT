@@ -1,0 +1,67 @@
+/*для первого абзаца*/
+.firstSubparagraph {
+
+	border-left: 2px solid #ccc; /* Параметры линии */
+	border-color: red;
+	background: white; 
+	padding-left: 30px;
+	padding-right: 30px;
+	text-indent: 20px;
+	text-align: justify;
+}
+
+/*для общих отступов*/
+.firstDiv {
+
+	margin-left: 5em;
+	margin-right: 2em; 
+}
+
+/*для первого заголовка*/
+.firstTextHeader {
+
+	text-align: center;
+	color: blue;
+	text-shadow: 2px 2px 0px darkblue, 0 0 0em black;
+	font-family: Arial; 
+}
+
+/*для второго заголовка*/
+.secondTextHeader {
+
+	text-decoration: overline underline;
+	text-align: center;
+	background: green; 
+	background-position: top 12pt;
+	padding-bottom: 10pt; 
+	padding-top: 10pt;
+	padding: 10pt;
+	margin-right: 300pt; 
+	margin-left: 300pt;
+	color: yellow; 
+}
+
+/*Второй блок*/
+.secondSubparagraph {
+
+	background: white;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-indent: 20px;
+	text-align: justify;
+	border-right: 5px double blue;
+
+
+}
+
+/*третий блок*/
+.threeSubparagraph {
+
+	background: white;
+	padding-left: 0px;
+	padding-right: 30px;
+	text-indent: 20px;
+	text-align: justify;
+	border-left: 25px solid green; /* Параметры линии */
+
+}
