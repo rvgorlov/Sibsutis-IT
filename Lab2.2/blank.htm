@@ -9,23 +9,31 @@
 // создаем глобальные переменные для обмена между функциями
 
 var delay = 1000;				// значение задержки
-var imageNum = 1; 				// стартовый номер картинки
-var theImages = new Array();	// массив с названиями картинок
+var imgNumber = 1; 				// стартовый номер картинки
+var arrayOfImg = new Array();	// массив с названиями картинок
+var arrayOfImg1 = new Array();	// массив с названиями картинок
 var startFlag = 3;				// буль для старта системы
 
 for (i = 1; i < 13; i++) {
 	// alert('Первая строка\nВторая строка');
-   		theImages[i] = new Image();
-   		theImages[i].src = "s" + i + ".gif";
+   		arrayOfImg[i] = new Image();
+   		arrayOfImg[i].src = "s" + i + ".gif";
+   }
+
+for (i = 12; i > 0; i--) {
+	// alert('Первая строка\nВторая строка');
+   		arrayOfImg1[i] = new Image();
+   		arrayOfImg1[i].src = "s" + (12-i) + ".gif";
    }
 
 function animation() {
 
 	if (startFlag == 0) {
-   		document.anim.src = theImages[imageNum].src;
-   		imageNum++;   
-   		if (imageNum > 10) {
-   			imageNum = 1;
+   		document.anim.src = arrayOfImg[imgNumber].src;
+   		document.anim1.src = arrayOfImg1[imgNumber].src;
+   		imgNumber++;   
+   		if (imgNumber > 10) {
+   			imgNumber = 1;
    		}
    		setTimeout('animation()', delay); 
 	}
@@ -68,13 +76,18 @@ function StartTimer() {
 </script>
 
 <body bgcolor="white" text="black" link="blue" alink="red" vlink="green">
-<img name="anim" src="s1.gif" alt="Альтернативный текст" onLoad="StartTimer()">  
+<img name="anim" src="s1.gif" alt="Альтернативный текст" onLoad="StartTimer()">
+
+
 <form>
 	<input type="button" value="Медленнее" onclick="slow()">
 	<input type="button" value="Быстрее" onclick="fast()">
 	<input type="button" value="Стоп" onclick="stop()">
 	<input type="button" value="Старт" onclick="start()">
 </form>
+
+<img name="anim1" src="s12.gif" alt="Альтернативный текст" onLoad="StartTimer()">  
+
 
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+        <title>Лабораторная 2.12 Горлов Роман ИУ-423</title>
+	<script src="script.js"></script>
+</head>
+
+
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+header {
+	height: 24px;
+	background: #e4e4e4;
+	margin: 0;
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+div {
+  background: #DACFCF;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+input {
+
+	width: 100px;
+
+}
+
+.divRezult {
+	padding: 0px;
+}
+
+</style>
+
+<body OnLoad="arrayGenerate();">
+	<header>
+		Двоичный поиск
+	</header>
+	<div>
+	<section>
+		<form action="#" name="form1">
+			<font >Массив</font>
+			<input type="text" name="textArr0"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr1"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr2"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr3"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr4"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr5"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr6"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr7"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr8"  onChange="inputArraySort()"/>
+			<input type="text" name="textArr9"  onChange="inputArraySort()"/><br><br><br><br>
+				<font >Поиск</font>
+				<input type="text" name="findField"  /><br>
+				<font >Результат(Позиция)</font>
+				<input type="text" name="resultField"  />
+		</form>
+		<br />
+		<form action="#" name="form2">
+			<div class="divRezult" id="searchHistory"></div>
+		</form>
+		<input type="button" OnClick="find();" value="Поиск" />
+		<input type="button" OnClick="clearHistory();" value="Очистить" />
+	</section>
+
+</div>
+</body>
+</html>

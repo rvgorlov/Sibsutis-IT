@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//RU">
+
+
+<!-- http://javascript.ru/ui/draganddrop#osnovnaya-logika-drag-and-drop -->
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+	<title>Горлов Роман ИУ-423 Лабораторная 2.3</title>
+</head> 
+
+<script>
+function allowDrop(ev) {
+    // не дает сработать функции по умолчанию
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    // передает на хранение таргет
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    // не дает сработать функции по умолчанию
+    ev.preventDefault();
+    // грузим объект из дата трансфера
+    var data = ev.dataTransfer.getData("text");
+    // помещаем объект из дата трасфера в нужный таргет
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<body bgcolor="lightblue" text="black" link="blue" alink="red" vlink="green">
+
+	<H1 align=center>Собери мозаику!</H1>
+    <P>Перемещая картинки мышкой нужно собрать рисунок.<br>
+        <img id="img1" src="img/r1.gif" dragenabled ondragstart="drag(event)">
+        <img id="img2" src="img/r2.gif" dragenabled ondragstart="drag(event)">
+        <img id="img3" src="img/r3.gif" dragenabled ondragstart="drag(event)">
+        <img id="img4" src="img/r4.gif" dragenabled ondragstart="drag(event)">
+
+
+	<div style= "position:absolute; 
+                top:270px; 
+                left:10px; 
+                cursor:hand;
+                padding:0px;
+                border:2px 
+                solid #aaaaaa; 
+                width:90; 
+                height:160;"
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)"></div>
+
+    <div style= "position:absolute; 
+                top:270px; 
+                left:120px; 
+                cursor:hand;
+                padding:0px;
+                border:2px 
+                solid #aaaaaa; 
+                width:90; 
+                height:160;"
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)"></div>
+
+    <div style= "position:absolute; 
+                top:460px; 
+                left:10px; 
+                cursor:hand;
+                padding:0px;
+                border:2px 
+                solid #aaaaaa; 
+                width:90; 
+                height:160;"
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)"></div>
+
+    <div style="position:absolute; 
+                top:460px; 
+                left:120px; 
+                cursor:hand;
+                padding:0px;
+                border:2px 
+                solid #aaaaaa; 
+                width:90; 
+                height:160;"
+        ondrop="drop(event)" 
+        ondragover="allowDrop(event)"></div>
+
+
+</body>
+
+</html>
