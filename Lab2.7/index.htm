@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.2//RU">
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Лабораторная №2.6</title>
+</head> 
+
+<script type="text/javascript">
+
+function func(){
+    // получаем значения
+    var str = document.getElementsByTagName('input')[0].value,
+    textarea = document.getElementsByTagName('textarea')[0], i=0;
+    (function(){ 
+        if(i<str.length){
+            // добавляем в массив символы
+            textarea.value += str[i]+'\n';
+            i++;
+            //вызываем функцию выполняему сейчас
+            setTimeout(arguments.callee, 0);  
+    };    
+    }())
+}
+
+
+</script>
+
+<body bgcolor="lightblue" text="black" link="blue" alink="red" vlink="green">
+<input type="text"><br><br>
+<input type="button" value="Выполнить" onclick="func()">
+<input type="button" value="Очистить" onclick="document.getElementById('name').value='';"><br><br>
+<textarea id="name" width="100" height="100"></textarea>
+</body>
+</html>
