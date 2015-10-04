@@ -6,10 +6,17 @@
 	<script src="script.js"></script>
 </head>
 
+<script>
+
+function change () {
+	parent.topFrame.topFrame11.topFrameW1.img1.src="img/r1.gif";
+}
+
+</script>
+
+
 <body bgcolor=Gainsboro>
 <h4 align="center"><i>Выбирайте элемент</i></h4>	
-
-
 <form name"form1" >
 	<div align=center>
 		<hr>
@@ -23,13 +30,13 @@
 
 		Номер фрейма<br><br>
 		<select>
-  			<option>1</option>
-  			<option>2</option>
-  			<option>3</option>
-  			<option>4</option>
+  			<option>w1</option>
+  			<option>w2</option>
+  			<option>w3</option>
+  			<option>w4</option>
 		</select><br><hr><br>
 
-		<input type=button value="Сопоставить">
+		<input type=button value="Сопоставить" onClick="change()">
 
 	</div>
 </body>

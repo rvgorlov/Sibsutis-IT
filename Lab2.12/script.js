@@ -18,50 +18,50 @@ function arrayGenerate() {
 	}
 }
 
-// function tableCreate() {
+function tableCreate() {
 
-// 	form2.removeChild(form2.lastChild);
-// 	var dstForm= document.getElementsByName("form2")[0];
-// 	var tbl = document.createElement("table");
-// 	var tblBody = document.createElement("tbody");
+	form2.removeChild(form2.lastChild);
+	var dstForm= document.getElementsByName("form2")[0];
+	var tbl = document.createElement("table");
+	var tblBody = document.createElement("tbody");
 
-// 	var hrow = document.createElement("tr");
-// 	var hcell = document.createElement("td");    
-// 	var hcellText = document.createTextNode("Low");
-// 	hcell.appendChild(hcellText);
-// 	hrow.appendChild(hcell);
-// 	hcell = document.createElement("td");    
-// 	hcellText = document.createTextNode("High");
-// 	hcell.appendChild(hcellText);
-// 	hrow.appendChild(hcell);
-// 	hcell = document.createElement("td");
-// 	hcellText = document.createTextNode("Medium");
-// 	hcell.appendChild(hcellText);
-// 	hrow.appendChild(hcell);
-// 	hcell = document.createElement("td");
-// 	hcellText = document.createTextNode("A[medium]");
-// 	hcell.appendChild(hcellText);
-// 	hrow.appendChild(hcell);
-// 	tblBody.appendChild(hrow);
+	var hrow = document.createElement("tr");
+	var hcell = document.createElement("td");    
+	var hcellText = document.createTextNode("Low");
+	hcell.appendChild(hcellText);
+	hrow.appendChild(hcell);
+	hcell = document.createElement("td");    
+	hcellText = document.createTextNode("High");
+	hcell.appendChild(hcellText);
+	hrow.appendChild(hcell);
+	hcell = document.createElement("td");
+	hcellText = document.createTextNode("Medium");
+	hcell.appendChild(hcellText);
+	hrow.appendChild(hcell);
+	hcell = document.createElement("td");
+	hcellText = document.createTextNode("A[medium]");
+	hcell.appendChild(hcellText);
+	hrow.appendChild(hcell);
+	tblBody.appendChild(hrow);
 
-// 	for (var j = 0; j <= ((k - 4) / 4); j++) {
-// 	    var row = document.createElement("tr");
-// 	    for (var i = 0; i < 4; i++) {
-// 		var cell = document.createElement("td");    
-// 		var cellText = document.createTextNode(historyArray[j * 4 + i]); 
-// 		cell.appendChild(cellText);
-// 		row.appendChild(cell);
-// 	    }
-// 	    tblBody.appendChild(row);
-// 	}
+	for (var j = 0; j <= ((k - 4) / 4); j++) {
+	    var row = document.createElement("tr");
+	    for (var i = 0; i < 4; i++) {
+		var cell = document.createElement("td");    
+		var cellText = document.createTextNode(historyArray[j * 4 + i]); 
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+	    }
+	    tblBody.appendChild(row);
+	}
 
-// 	tbl.appendChild(tblBody);
-// 	dstForm.appendChild(tbl);
-// 	tbl.setAttribute("class", "FlatTable");
+	tbl.appendChild(tblBody);
+	dstForm.appendChild(tbl);
+	tbl.setAttribute("class", "FlatTable");
 
-// 	var cap = tbl.createCaption();
-// 	cap.innerHTML = "<font class=\"FlatFont\">Промежуточные результаты</font>";
-// }
+	var cap = tbl.createCaption();
+	cap.innerHTML = "<font class=\"FlatFont\">Промежуточные результаты</font>";
+}
 
 // реализация бинарного поиска по внутреннему массиву
 function binarySearch(value) {

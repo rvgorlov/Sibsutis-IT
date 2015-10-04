@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+        <title>Лабораторная 2.5 Горлов Роман ИУ-423</title>
+</head>
+
+
+<body style="background: #7B68EE; ">
+
+	<select id="s1" name="s1" size="1" maxlength="32" style="width:336px;"  onChange="prov()">
+        <option value="1" >Автоматом</option>
+        <option value="2" >Перейдите на поле "Сторона</option>
+        <option value="3" >Уйдите с поля "Сторона</option>
+        <option value="4" >Выделите поле "Сторона</option>
+    </select>
+
+    <iframe src="p1.htm" id="myframe" name="myframe"></iframe>
+
+<script>
+function prov(){
+var stroka='p' + (s1.selectedIndex+1) + '.htm';
+document.getElementById("myframe").src = stroka;
+var frm=document.getElementById("myframe").contentDocument.body.innerHTML;
+pr.innerHTML=frm;
+}
+s1.onchange = prov;
+</script>
+		
+</body>
+</html>

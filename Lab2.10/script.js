@@ -2,11 +2,11 @@
 var delay = 1000; 
 // строка для времени
 var ClockString;
-// выполняется в фоне
 clock();
 
 function reloadMe() {
 	document.location.reload(true);
+	window.setTimeout("time()",0);
 }
 
 // проверка длинны строки, чтобы корректно отображалось.

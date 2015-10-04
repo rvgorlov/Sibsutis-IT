@@ -15,7 +15,7 @@ div {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 20px;
 }
 
 html,body {
@@ -34,8 +34,43 @@ img {
 
 <body OnLoad="setTimeout('reloadMe()', delay);">
 
+
+<script type="text/javascript" language="JavaScript">
+function daysLeftNewYear() {
+ today = new Date()
+ //Можно установить любую дату
+ nextDate = new Date("January 1, 2016")
+ //Количество миллисекунд в одном дне
+ msPerDay = 24*60*60*1000; 
+ //Высчитываем количество дней
+ daysLeft = Math.round((nextDate.getTime() - today.getTime())/msPerDay);
+ hourLeft = Math.round((nextDate.getTime() - today.getTime())/msPerDay*24);
+ minLeft = Math.round((nextDate.getTime() - today.getTime())/msPerDay*24*60);
+ secLeft = Math.round((nextDate.getTime() - today.getTime())/msPerDay*24*60*60);
+ dayname = ""
+ ds = ""+daysLeft
+ //Вырезаем последнею цифру
+ dd=parseInt(ds.substr(ds.length-1))
+ //Склоняем слово ДЕНЬ
+ if(daysLeft>4&&daysLeft<21)dayname=" дней"
+ else
+ if(dd==1)dayname=" день"
+ else
+ if(dd==2||dd==3||dd==4)dayname=" дня"
+ else dayname=" дней"
+ //Выводим надпись в документ
+ if(daysLeft<0) {document.write("С новым годом!!!")}
+ else {
+ if(daysLeft==0) {document.write("Завтра новый год!")} else {
+ document.write("До нового года осталось: ["+daysLeft + "]"+ dayname + " или [" + hourLeft + "] часов " + " или [" + minLeft + "] минут [" + secLeft + "] сек" +"!")}
+ }
+}
+</script>
+
+
+
 <h1>
-  <div>Который час?</div>
+  <div>Который час? <script type="text/javascript" language="JavaScript">daysLeftNewYear()</script></p></div>
 </h1>
 	<div><script>document.write(ClockString);</script></div>
 </body>
