@@ -18,5 +18,6 @@ function Sort() {
 	array1.sort(function(a,b){return a - b});
 	for (i = 1; i < 11; i++) {
 		document.form1.elements["sortArr" + i].value = array1[i];
+		document.form1.elements["sortArrB" + i].value = array1[10-i];
 	}
 }
