@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+        <title>Лабораторная 2.13 Горлов Роман ИУ-423</title>
+	<script src="script.js"></script>
+</head>
+
+
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+header {
+	height: 24px;
+	background: #e4e4e4;
+	margin: 0;
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+div {
+  background: #DACFCF;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+input {
+
+	width: 100px;
+
+}
+
+.divRezult {
+	padding: 20px;
+}
+
+</style>
+
+<body>
+    
+<div>
+<form>
+
+    Перевести<br> 
+    <input type="text" name="num" size="22"><br><br>
+    Из системы:<br>
+    <input type="text" name="base_from" size="4" value="10" onblur="if ((this.value != 2) &&
+    																 (this.value != 8) &&
+    																 (this.value != 10) &&
+    																 (this.value != 16)) {alert('2 - 8 - 10 - 16');
+    																 					this.select();
+    																 					this.focus();}"><br>
+
+    В систему<br>
+    <input type="text" name="base_to" size="4" value="2" onblur="if ((this.value!=2) &&
+    																 (this.value!=8) &&
+    																 (this.value!=10) &&
+    																 (this.value!=16)) {alert('2 - 8 - 10 - 16');
+    																 					this.select();
+																						this.focus();}"><br>
+
+    <input type="button" value=" = " onclick="convert(this.form)"><br>
+    <div class="divRezult"><input type="text" name="amount" size="16"></div>
+</form>
+<p align="left">Доступные системы счисления: 2,8,10,16</p>
+</div>
+</body>
+</html>
