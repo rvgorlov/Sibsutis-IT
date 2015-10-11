@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+        <title>Лабораторная 3.1 || Горлов Роман ИУ-423</title>
+</head>
+
+
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+div {
+padding: 0px; 
+
+}
+.div1 {
+  	position: absolute;
+  	background: #DACFCF;
+  	top: 0px;
+  	left: 0px;
+  	width: 50px;
+  	height: 0px;
+  	padding: 25px;
+  	text-align: center;
+}
+.div2 {
+	   position: absolute;
+	   border: solid 1px black;
+	   background: #DACFCF;
+  	 top: 48px;
+  	 left: 25px;
+  	 width: 80px;
+  	 text-align: center;
+}
+.div12 {
+  	position: absolute;
+  	background: #DACFCF;
+  	top: 0px;
+  	left: 100px;
+  	width: 50px;
+  	height: 0px;
+  	padding: 25px;
+  	text-align: center;
+}
+.div22 {
+	position: absolute;
+	border: solid 1px black;
+	background: #DACFCF;
+  	top: 48px;
+  	left: 125px;
+  	width: 80px;
+  	text-align: center;
+}
+.div13 {
+  	position: absolute;
+  	background: #DACFCF;
+  	top: 0px;
+  	left: 200px;
+  	width: 50px;
+  	height: 0px;
+  	padding: 25px;
+  	text-align: center;
+}
+.div23 {
+	position: absolute;
+	border: solid 1px black;
+	background: #DACFCF;
+  	top: 48px;
+  	left: 225px;
+  	width: 95px;
+  	text-align: center;
+}
+
+.div3 {
+    position: absolute;
+    border: solid 1px black;
+    background: #DACFCF;
+    top: 80px;
+    left: 320px;
+    width: 95px;
+    text-align: center;
+}
+
+.div4 {
+    position: absolute;
+    border: solid 1px black;
+    background: #DACFCF;
+    top: 85px;
+    left: 415px;
+    width: 95px;
+    text-align: center;
+}
+input {
+
+	width: 100px;
+
+}
+.divRezult {
+	padding: 20px;
+}
+</style>
+
+<script type="text/javascript">
+
+function showMenu1(i) {
+	if (document.getElementById("InterruptMenu" + i).style.display == "none") 
+		document.getElementById("InterruptMenu" + i).style.display = ""; 
+	else 
+    for (idx = 1; idx < 6; idx++)
+		  document.getElementById("InterruptMenu" + idx).style.display = "none"; }
+</script>
+
+
+<body>
+
+
+<div id = "Menu1" class = "div1" onMouseOver="showMenu1(1);" onMouseOut="setTimeout('showMenu1(1);', 6000)
+" style="display:""">menu1</div>
+<div id = "Menu2" class = "div12" onMouseOver="showMenu1(2);" onMouseOut="setTimeout('showMenu1(2);', 6000)
+" style="display:""">menu2</div>
+<div id = "Menu3" class = "div13" onMouseOver="showMenu1(3);" onMouseOut="setTimeout('showMenu1(3);', 6000)
+" style="display:""">menu3</div>
+
+<div id = "InterruptMenu1" class = "div2" style="display:none;">IntMenu1<br>IntMenu1<br>IntMenu1</div>
+<div id = "InterruptMenu2" class = "div22" style="display:none;">IntMenu2<br>IntMenu2<br>IntMenu2</div>
+<div id = "InterruptMenu3" class = "div23" style="display:none;">SubMenu3.1<div onMouseOver="showMenu1(4);" style="display:""">SubMenu3.1</div>SubMenu3.1</div>
+
+
+<div id = "InterruptMenu4" class = "div3" style="display:none;"><div onMouseOver="showMenu1(5);" style="display:""">SubMenu3.2</div></div>
+<div id = "InterruptMenu5" class = "div4" style="display:none;">SubMenu3.3</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+        <title>Лабораторная 2.14 || Горлов Роман ИУ-423</title>
+        <script src="script.js"></script>
+</head>
+
+
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+header {
+	height: 24px;
+	background: #e4e4e4;
+	margin: 0;
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+div {
+  background: #DACFCF;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+input {
+
+	width: 100px;
+
+}
+
+.divRezult {
+	padding: 20px;
+}
+
+</style>
+
+<script>
+
+function dump_props(obj, objName){
+    var result = document.getElementById("textareaName");
+  	result.value = "";
+    for (var i in obj) // обращение к свойствам объекта по индексу
+        result.value += objName + "." + i + " = " + obj[i] + "\n";
+}
+
+
+</script>
+
+<body>
+    
+<div>
+<input type="button"  value="Определить" onclick="dump_props(document.getElementById('textareaName'), 'textarea')"><br><br>
+<textarea id = "textareaName" rows="10" cols="45" name="text" id="text1" ></textarea>
+</div>
+</body>
+</html>

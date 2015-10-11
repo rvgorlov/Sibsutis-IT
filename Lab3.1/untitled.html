@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+	<meta charset="UTF-8" />
+<TITLE>Скрипт</TITLE>
+<style type="text/css">
+BODY {margin:50px 0 0 200px; display:block; width:300px;  }
+.onner, .onner a {color: #333; font-size:14pt; font-weight:bold; font-family: Arial, Trebuchet MS, Georgia, 'Times New Roman', Times, serif; line-height:180%; }
+.spoiler {border:0px solid #ddd; padding:3px;}
+.spoiler .inner {border:0px solid #eee; padding:3px;margin:3px;}
+</style>
+<script type="text/javascript">
+function showSpoiler(obj) {var inner = obj.parentNode.getElementsByTagName("div")[0]; if (inner.style.display == "none") inner.style.display = ""; else inner.style.display = "none"; }
+</script>
+</HEAD>
+<BODY>
+<div class="spoiler">
+<span class="onner" onclick="showSpoiler(this);"><H2>Показать/Скрыть</H2></span>
+<div class="inner" style="display:none;">Скрытый текст</div>
+</div>
+</BODY>
+</HTML>
